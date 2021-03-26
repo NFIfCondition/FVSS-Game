@@ -224,18 +224,12 @@ SWIFT_CLASS("_TtC9FVSS_Game11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UITouch;
-@class UIEvent;
+@class SKView;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC9FVSS_Game9GameScene")
 @interface GameScene : SKScene
-- (void)sceneDidLoad;
-- (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
-- (void)touchesMoved:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
-- (void)touchesEnded:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
-- (void)touchesCancelled:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
-- (void)update:(NSTimeInterval)currentTime;
+- (void)didMoveToView:(SKView * _Nonnull)view;
 - (nonnull instancetype)initWithSize:(CGSize)size OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -247,9 +241,6 @@ SWIFT_CLASS("_TtC9FVSS_Game9GameScene")
 SWIFT_CLASS("_TtC9FVSS_Game18GameViewController")
 @interface GameViewController : UIViewController
 - (void)viewDidLoad;
-@property (nonatomic, readonly) BOOL shouldAutorotate;
-@property (nonatomic, readonly) UIInterfaceOrientationMask supportedInterfaceOrientations;
-@property (nonatomic, readonly) BOOL prefersStatusBarHidden;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end

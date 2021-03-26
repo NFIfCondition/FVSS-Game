@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.4 (swiftlang-1205.0.16.12 clang-1205.0.19.6)"
+options: "7a798040e10a3ca153b0d7534cdde533"
+build_time: [1616757180, 633281000]
+inputs:
+  "/Users/benjaminnierlich/Desktop/FVSS Game/FVSS Game/GameScene.swift": [1616757180, 571092409]
+  "/Users/benjaminnierlich/Desktop/FVSS Game/FVSS Game/GameViewController.swift": [1616757120, 582350983]
+  "/Users/benjaminnierlich/Desktop/FVSS Game/FVSS Game/AppDelegate.swift": [1616708612, 964920590]
