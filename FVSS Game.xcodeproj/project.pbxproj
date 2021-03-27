@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CD897B1260FB7CA00B87DDB /* Loadingscreen.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1CD897B0260FB7CA00B87DDB /* Loadingscreen.sks */; };
 		CFF704EB260D3B84007B7DDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF704EA260D3B84007B7DDA /* AppDelegate.swift */; };
 		CFF704ED260D3B84007B7DDA /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = CFF704EC260D3B84007B7DDA /* GameScene.sks */; };
 		CFF704F1260D3B84007B7DDA /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF704F0260D3B84007B7DDA /* GameScene.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CD897B0260FB7CA00B87DDB /* Loadingscreen.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Loadingscreen.sks; sourceTree = "<group>"; };
 		CFF704E7260D3B84007B7DDA /* FVSS Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FVSS Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF704EA260D3B84007B7DDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFF704EC260D3B84007B7DDA /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				CFF704EA260D3B84007B7DDA /* AppDelegate.swift */,
 				CFF704EC260D3B84007B7DDA /* GameScene.sks */,
+				1CD897B0260FB7CA00B87DDB /* Loadingscreen.sks */,
 				CFF704F0260D3B84007B7DDA /* GameScene.swift */,
 				CFF704F2260D3B84007B7DDA /* GameViewController.swift */,
 				CFF704F4260D3B84007B7DDA /* Main.storyboard */,
@@ -233,6 +236,7 @@
 			files = (
 				CFF704F6260D3B84007B7DDA /* Main.storyboard in Resources */,
 				CFF704ED260D3B84007B7DDA /* GameScene.sks in Resources */,
+				1CD897B1260FB7CA00B87DDB /* Loadingscreen.sks in Resources */,
 				CFF704F8260D3B85007B7DDA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
