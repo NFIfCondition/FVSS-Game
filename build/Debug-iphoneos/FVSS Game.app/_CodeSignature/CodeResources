@@ -4,9 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Assets.car</key>
+		<data>
+		EP3DGIDSX09XykoCn5EgvzqxuT8=
+		</data>
 		<key>Base.lproj/Main.storyboardc/BV1-FR-VrT-view-3se-qz-xqx.nib</key>
 		<data>
-		JMzMK/AmULHSeGu0fHkDDUa3FZ4=
+		5x/TqpdVRvkYxy4IJwLaoFqEHpc=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
@@ -14,15 +18,11 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-BV1-FR-VrT.nib</key>
 		<data>
-		TsAFjax/hs7W1M8lZbI0ztI0eD4=
-		</data>
-		<key>GameScene.sks</key>
-		<data>
-		wdMbaunZMMCN/rXGd9mdRjQdt4A=
+		IpuPucg8LwgfRClrJfDLguYGz3c=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		qF9OjUZZHLvO0H5HK20Rw2yUMno=
+		/ulnpawk/yCAmX2jie6cxfS9DIo=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -35,11 +35,18 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Assets.car</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ITEFZ8zES6Ap4U+uYJ1KBLiyZk8iQJsuQ3mASL3I/K0=
+			</data>
+		</dict>
 		<key>Base.lproj/Main.storyboardc/BV1-FR-VrT-view-3se-qz-xqx.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gZmfYwNJ9i4CMITD4LVfj1SbgJI6ZGfsLIHtzAGg3rw=
+			pgH+cfKM7g1X/Jul9Pp3m3r8SzHLh/VG4qHRLRamZJU=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
@@ -53,14 +60,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			UM/ObfZEoohI/eJa/nR05vzom8gMY+D4KrMnBgwfBDw=
-			</data>
-		</dict>
-		<key>GameScene.sks</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			5nrY/SIT/PF12JDRf4iWd5civXEcfJB6Y6d7YalPcI8=
+			CVWTMetNlijKkS2XrFRN2Zt8XoDmOWTyWL409caZPP0=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>
