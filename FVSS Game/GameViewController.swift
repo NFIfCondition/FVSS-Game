@@ -18,6 +18,10 @@ class GameViewController: UIViewController {
         skview.showsFPS = true
         skview.showsNodeCount = true
         
+        
+        
+        
+        
         skview.presentScene(loadingscene)
         
         

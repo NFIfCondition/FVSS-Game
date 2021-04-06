@@ -1,28 +1,25 @@
 {
-  "buildCommand" : "build",
+  "buildCommand" : "prepareForIndexing",
   "configuredTargets" : [
     {
       "guid" : "03934715213d70c907b9ee4e940e647055abb2ce290ebf6540aa4ee0d1c4eef1"
     }
   ],
-  "continueBuildingAfterErrors" : false,
+  "continueBuildingAfterErrors" : true,
   "enableIndexBuildArena" : false,
   "hideShellScriptEnvironment" : false,
   "parameters" : {
     "action" : "build",
-    "activeArchitecture" : "arm64",
+    "activeArchitecture" : "x86_64",
     "activeRunDestination" : {
       "disableOnlyActiveArch" : false,
-      "platform" : "iphoneos",
-      "sdk" : "iphoneos14.5",
-      "sdkVariant" : "iphoneos",
+      "platform" : "iphonesimulator",
+      "sdk" : "iphonesimulator14.5",
+      "sdkVariant" : "iphonesimulator",
       "supportedArchitectures" : [
-        "arm64e",
-        "arm64v8",
-        "arm64",
-        "armv8"
+        "x86_64"
       ],
-      "targetArchitecture" : "arm64"
+      "targetArchitecture" : "x86_64"
     },
     "arenaInfo" : {
       "buildIntermediatesPath" : "",
@@ -37,14 +34,14 @@
     "overrides" : {
       "synthesized" : {
         "table" : {
-          "ASSETCATALOG_FILTER_FOR_DEVICE_MODEL" : "iPhone13,4",
+          "ASSETCATALOG_FILTER_FOR_DEVICE_MODEL" : "iPod9,1",
           "ASSETCATALOG_FILTER_FOR_DEVICE_OS_VERSION" : "14.5",
           "BUILD_ACTIVE_RESOURCES_ONLY" : "YES",
           "ENABLE_PREVIEWS" : "NO",
-          "TARGET_DEVICE_IDENTIFIER" : "00008101-000458363CD0001E",
-          "TARGET_DEVICE_MODEL" : "iPhone13,4",
+          "TARGET_DEVICE_IDENTIFIER" : "61EBD367-B849-4934-8DA2-E9AC4D3781FD",
+          "TARGET_DEVICE_MODEL" : "iPod9,1",
           "TARGET_DEVICE_OS_VERSION" : "14.5",
-          "TARGET_DEVICE_PLATFORM_NAME" : "iphoneos"
+          "TARGET_DEVICE_PLATFORM_NAME" : "iphonesimulator"
         }
       }
     }
