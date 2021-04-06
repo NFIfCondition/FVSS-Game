@@ -17,6 +17,7 @@ class GameScene: SKScene {
         loadingImage.position = CGPoint.zero
         loadingImage.size = self.size
         loadingImage.zPosition = -1
+        loadingImage.setScale(1.2)
         self.addChild(loadingImage)
         
     }

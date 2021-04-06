@@ -11,7 +11,6 @@ import SpriteKit
 class GameViewController: UIViewController {
 
     override func viewDidLoad() {
-        super.viewDidLoad()
         
         let loadingscene = GameScene(size: self.view.bounds.size)
         let skview = self.view as! SKView
@@ -23,7 +22,6 @@ class GameViewController: UIViewController {
         
         
         skview.presentScene(loadingscene)
-        
         
     }
     
