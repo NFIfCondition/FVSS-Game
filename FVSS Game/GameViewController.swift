@@ -18,7 +18,9 @@ class GameViewController: UIViewController {
         skview.showsNodeCount = true
         
         
-        
+        loadingscene.scaleMode = .aspectFill
+
+        loadingscene.size = skview.bounds.size
         
         
         skview.presentScene(loadingscene)
