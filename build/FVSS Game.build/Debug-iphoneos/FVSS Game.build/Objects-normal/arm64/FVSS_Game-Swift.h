@@ -256,10 +256,13 @@ SWIFT_CLASS("_TtC9FVSS_Game6ingame")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIButton;
 
-SWIFT_CLASS("_TtC9FVSS_Game12newCharakter")
-@interface newCharakter : SKScene
+SWIFT_CLASS("_TtC9FVSS_Game15selectCharakter")
+@interface selectCharakter : SKScene
 - (void)didMoveToView:(SKView * _Nonnull)view;
+- (void)edisonbtnClicked:(UIButton * _Nonnull)_;
+- (void)teslabtnClicked:(UIButton * _Nonnull)_;
 - (void)update:(NSTimeInterval)currentTime;
 - (nonnull instancetype)initWithSize:(CGSize)size OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
