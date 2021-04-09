@@ -24,20 +24,5 @@ class GameViewController: UIViewController {
         
         
         skview.presentScene(loadingscene)
-        
-        preLoadTextures()
-        
     }
-    
-    func preLoadTextures() {
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            self.switchToGame()
-        }
-    }
-    
-    func switchToGame(){
-        
-    }
-    
 }

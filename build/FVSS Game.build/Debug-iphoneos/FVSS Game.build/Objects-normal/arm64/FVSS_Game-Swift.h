@@ -230,6 +230,7 @@ SWIFT_CLASS("_TtC9FVSS_Game11AppDelegate")
 SWIFT_CLASS("_TtC9FVSS_Game9GameScene")
 @interface GameScene : SKScene
 - (void)didMoveToView:(SKView * _Nonnull)view;
+- (void)update:(NSTimeInterval)currentTime;
 - (nonnull instancetype)initWithSize:(CGSize)size OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -243,6 +244,16 @@ SWIFT_CLASS("_TtC9FVSS_Game18GameViewController")
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC9FVSS_Game6ingame")
+@interface ingame : SKScene
+- (void)didMoveToView:(SKView * _Nonnull)view;
+- (void)update:(NSTimeInterval)currentTime;
+- (nonnull instancetype)initWithSize:(CGSize)size OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 #if __has_attribute(external_source_symbol)
