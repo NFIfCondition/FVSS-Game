@@ -8,6 +8,7 @@
 import SpriteKit
 
 var loaded: Bool = false
+var charakter: String = " "
 
 class GameScene: SKScene {
     
@@ -35,9 +36,44 @@ class GameScene: SKScene {
     func preloadStructs(){
         
     }
+
 }
 
+
+//INGAME SCENE
 class ingame: SKScene{
+    
+    func checkUserCharakter() -> String{
+        var charakter: String = "invalid"
+        //insert charakter name (edison, Tesla)
+        //else dont switch
+        
+        
+        return charakter
+    }
+    
+    override func didMove(to view: SKView) {
+        if checkUserCharakter() != "invalid" {
+            charakter = checkUserCharakter()
+        } else {
+            //send to create a charakter
+                let ingame = newCharakter(size: self.size)
+                let animation = SKTransition.fade(with: SKColor.red, duration: 3)
+                self.view?.presentScene(ingame, transition: animation)
+        }
+    }
+    
+    override func update(_ currentTime: TimeInterval) {
+        
+    }
+    
+}
+
+//CREATE CHARAKTRE SCENE
+class newCharakter: SKScene{
+    
+    //Charakter auswählen UI
+    //insert into database
     
     override func didMove(to view: SKView) {
         
@@ -46,5 +82,6 @@ class ingame: SKScene{
     override func update(_ currentTime: TimeInterval) {
         
     }
+    
     
 }
