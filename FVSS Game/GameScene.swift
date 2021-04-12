@@ -104,10 +104,14 @@ class selectCharakter: SKScene{
 class ingame: SKScene{
     
     var ground = SKSpriteNode()
+    let joystick = Joystick()
     
     override func didMove(to view: SKView) {
         self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         createGround()
+        
+        joystick.position = CGPoint(x: 200,y: 200)
+        self.addChild(joystick)
     }
     
     override func update(_ currentTime: TimeInterval) {
