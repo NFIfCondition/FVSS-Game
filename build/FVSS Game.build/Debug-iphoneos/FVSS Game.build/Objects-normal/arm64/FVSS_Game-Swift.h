@@ -247,10 +247,20 @@ SWIFT_CLASS("_TtC9FVSS_Game18GameViewController")
 @end
 
 
+SWIFT_CLASS("_TtC9FVSS_Game8Joystick")
+@interface Joystick : SKNode
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UITouch;
+@class UIEvent;
+
 SWIFT_CLASS("_TtC9FVSS_Game6ingame")
 @interface ingame : SKScene
 - (void)didMoveToView:(SKView * _Nonnull)view;
 - (void)update:(NSTimeInterval)currentTime;
+- (void)touchesMoved:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
 - (nonnull instancetype)initWithSize:(CGSize)size OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;

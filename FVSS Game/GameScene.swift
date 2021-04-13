@@ -105,18 +105,42 @@ class ingame: SKScene{
     
     var ground = SKSpriteNode()
     let joystick = Joystick()
+    let choosenCharakter = charakter
+    var player = SKSpriteNode()
+
     
     override func didMove(to view: SKView) {
         self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         createGround()
         
-        joystick.position = CGPoint(x: 200,y: 200)
+        insertCharakterIntoGame()
+        
+        joystick.position = CGPoint(x: -360,y: -120)
         self.addChild(joystick)
     }
     
     override func update(_ currentTime: TimeInterval) {
         moveGrounds()
     }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        joystick.moveJoystick(touch: touches.first!)
+        joystick.joystickAction = { (x: CGFloat, y: CGFloat) in
+            self.player.physicsBody?.applyForce(CGVector(dx: x * 70, dy: y * 70))
+            
+        }
+        
+    }
+    
+    func insertCharakterIntoGame(){
+        player = SKSpriteNode(imageNamed: choosenCharakter)
+        player.physicsBody = SKPhysicsBody(circleOfRadius: 10)
+        player.physicsBody?.mass = 0.2
+        player.position = CGPoint(x: 0, y: 0)
+        player.setScale(0.1)
+        addChild(player)
+    }
+
     
     func createGround(){
         for i in 0...3 {
