@@ -14,7 +14,7 @@ class Joystick: SKNode{
     var joystick = SKShapeNode()
     var stick = SKShapeNode()
     
-    let maxRange: CGFloat = 20
+    let maxRange: CGFloat = 0.1
     
     var xValue: CGFloat = 0
     var yValue: CGFloat = 0
@@ -30,13 +30,15 @@ class Joystick: SKNode{
         joystick.fillColor = .gray
         joystick.strokeColor = .clear
         
-        let stickRect = CGRect(x: 0, y: 0, width: 80, height: 80)
-        let stickPath = UIBezierPath(ovalIn: stickRect)
         
-        stick = SKShapeNode(path: stickPath.cgPath, centered: true)
         stick.fillColor = .darkGray
         stick.strokeColor = .white
         stick.lineWidth = 4
+        
+        let stickRect = CGRect(x: 0, y: 0, width: 80, height: 80)
+        let stickPath = UIBezierPath(ovalIn: stickRect)
+        let stick = SKShapeNode(path: stickPath.cgPath, centered: true)
+
         
         super.init()
         

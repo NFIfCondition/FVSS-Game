@@ -104,19 +104,30 @@ class selectCharakter: SKScene{
 class ingame: SKScene{
     
     var ground = SKSpriteNode()
-    let joystick = Joystick()
+    var joystick = Joystick()
     let choosenCharakter = charakter
     var player = SKSpriteNode()
 
     
     override func didMove(to view: SKView) {
-        self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        
         createGround()
+
+        player = SKSpriteNode(imageNamed: choosenCharakter)
         
-        insertCharakterIntoGame()
-        
-        joystick.position = CGPoint(x: -360,y: -120)
+        self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        joystick.position = CGPoint(x: -340,y: -120)
         self.addChild(joystick)
+        self.addChild(player)
+        
+        player.physicsBody = SKPhysicsBody(circleOfRadius: 10)
+        player.position = CGPoint(x: 0, y: 0)
+        player.setScale(0.1)
+        self.physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
+        //self.physicsBody?.affectedByGravity = true
+        
+        
+        
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -126,19 +137,14 @@ class ingame: SKScene{
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         joystick.moveJoystick(touch: touches.first!)
         joystick.joystickAction = { (x: CGFloat, y: CGFloat) in
-            self.player.physicsBody?.applyForce(CGVector(dx: x * 70, dy: y * 70))
-            
+            self.player.physicsBody?.applyForce(CGVector(dx: x * 0.1, dy: 0))
+            self.player.physicsBody?.allowsRotation = false
         }
-        
     }
+
     
     func insertCharakterIntoGame(){
-        player = SKSpriteNode(imageNamed: choosenCharakter)
-        player.physicsBody = SKPhysicsBody(circleOfRadius: 10)
-        player.physicsBody?.mass = 0.2
-        player.position = CGPoint(x: 0, y: 0)
-        player.setScale(0.1)
-        addChild(player)
+        
     }
 
     
