@@ -174,9 +174,13 @@ class ingame: SKScene{
             
         }))
     }
+    
+    
+    func createMap(){
+        let map = SKScene(fileNamed: "map")
+        SKView.presentScene(map)
         
-    
-    
+        
+    }
+
 }
-
-
