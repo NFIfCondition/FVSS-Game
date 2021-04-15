@@ -209,6 +209,46 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@class NSCoder;
+@class UITouch;
+@class UIEvent;
+@class NSString;
+
+SWIFT_CLASS("_TtC9FVSS_Game14AnalogJoystick")
+@interface AnalogJoystick : SKNode
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)listen;
+- (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+- (void)touchesMoved:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+- (void)touchesEnded:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+- (void)touchesCancelled:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@class SKTexture;
+@class UIColor;
+
+SWIFT_CLASS("_TtC9FVSS_Game23AnalogJoystickComponent")
+@interface AnalogJoystickComponent : SKSpriteNode
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)observeValueForKeyPath:(NSString * _Nullable)keyPath ofObject:(id _Nullable)object change:(NSDictionary<NSKeyValueChangeKey, id> * _Nullable)change context:(void * _Nullable)context;
+- (nonnull instancetype)initWithTexture:(SKTexture * _Nullable)texture color:(UIColor * _Nonnull)color size:(CGSize)size SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC9FVSS_Game19AnalogJoystickStick")
+@interface AnalogJoystickStick : AnalogJoystickComponent
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC9FVSS_Game23AnalogJoystickSubstrate")
+@interface AnalogJoystickSubstrate : AnalogJoystickComponent
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UIWindow;
 @class UIApplication;
 @class NSNumber;
@@ -225,7 +265,6 @@ SWIFT_CLASS("_TtC9FVSS_Game11AppDelegate")
 @end
 
 @class SKView;
-@class NSCoder;
 
 SWIFT_CLASS("_TtC9FVSS_Game9GameScene")
 @interface GameScene : SKScene
@@ -236,7 +275,6 @@ SWIFT_CLASS("_TtC9FVSS_Game9GameScene")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSString;
 @class NSBundle;
 
 SWIFT_CLASS("_TtC9FVSS_Game18GameViewController")
@@ -247,20 +285,10 @@ SWIFT_CLASS("_TtC9FVSS_Game18GameViewController")
 @end
 
 
-SWIFT_CLASS("_TtC9FVSS_Game8Joystick")
-@interface Joystick : SKNode
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@class UITouch;
-@class UIEvent;
-
 SWIFT_CLASS("_TtC9FVSS_Game6ingame")
 @interface ingame : SKScene
 - (void)didMoveToView:(SKView * _Nonnull)view;
 - (void)update:(NSTimeInterval)currentTime;
-- (void)touchesMoved:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
 - (nonnull instancetype)initWithSize:(CGSize)size OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;

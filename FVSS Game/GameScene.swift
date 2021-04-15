@@ -104,82 +104,50 @@ class selectCharakter: SKScene{
 class ingame: SKScene{
     
     var ground = SKSpriteNode()
-    var joystick = Joystick()
     let choosenCharakter = charakter
     var player = SKSpriteNode()
+    
+    let velocityMultiplier: CGFloat = 0.12
+      
+      enum NodesZPosition: CGFloat {
+        case joystick
+      }
+    
+      lazy var analogJoystick: AnalogJoystick = {
+        let screenSize = UIScreen.main.bounds
+            let js = AnalogJoystick(diameter: 100, colors: nil, images: (substrate: #imageLiteral(resourceName: "ausen"), stick: #imageLiteral(resourceName: "innen")))
+            js.position = CGPoint(x: screenSize.width * -0.5 + js.radius + 45, y: screenSize.height * -0.5 + js.radius + 45)
+            js.zPosition = NodesZPosition.joystick.rawValue
+            return js
+      }()
 
     
     override func didMove(to view: SKView) {
+        setupJoystick()
         
-        createGround()
-
         player = SKSpriteNode(imageNamed: choosenCharakter)
         
         self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        joystick.position = CGPoint(x: -340,y: -120)
-        self.addChild(joystick)
         self.addChild(player)
         
-        player.physicsBody = SKPhysicsBody(circleOfRadius: 10)
-        player.position = CGPoint(x: 0, y: 0)
-        player.setScale(0.1)
-        self.physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
-        //self.physicsBody?.affectedByGravity = true
-        
-        
-        
     }
+    
+    func setupJoystick() {
+          addChild(analogJoystick)
+      
+          analogJoystick.trackingHandler = { [unowned self] data in
+          self.player.position = CGPoint(x: self.player.position.x + (data.velocity.x * self.velocityMultiplier),
+                                         y: self.player.position.y + (data.velocity.y * self.velocityMultiplier))
+          self.player.zRotation = data.angular
+          }}
     
     override func update(_ currentTime: TimeInterval) {
-        moveGrounds()
+        
     }
     
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        joystick.moveJoystick(touch: touches.first!)
-        joystick.joystickAction = { (x: CGFloat, y: CGFloat) in
-            self.player.physicsBody?.applyForce(CGVector(dx: x * 0.1, dy: 0))
-            self.player.physicsBody?.allowsRotation = false
-        }
-    }
 
     
     func insertCharakterIntoGame(){
-        
-    }
-
-    
-    func createGround(){
-        for i in 0...3 {
-            let ground = SKSpriteNode(imageNamed: "background")
-            ground.name = "Background"
-            ground.size = CGSize(width: (self.scene?.size.width)!, height: (self.scene?.size.height)!)
-            ground.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-            ground.position = CGPoint(x: CGFloat(i) * ground.size.width, y: -(self.frame.size.height / 1000))
-            
-            self.addChild(ground)
-        }
-    }
-    
-    
-    
-    func moveGrounds(){
-        self.enumerateChildNodes(withName: "Background", using: ({
-            (node, error) in
-            
-            node.position.x -= 0.2
-            
-            if node.position.x < -((self.scene?.size.width)!){
-                node.position.x += (self.scene?.size.width)! * 3
-            }
-            
-        }))
-    }
-    
-    
-    func createMap(){
-        let map = SKScene(fileNamed: "map")
-        SKView.presentScene(map)
-        
         
     }
 
