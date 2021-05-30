@@ -122,18 +122,22 @@ class ingame: SKScene{
         map.yScale = 0.2
         let tileSet = SKTileSet(named: "Sample Grid Tile Set")!
         let tileSize = CGSize(width: 128, height: 128)
-        let columns = 256
-        let rows = 256
+        let columns = 128
+        let rows = 128
 
 
         let waterTiles = tileSet.tileGroups.first { $0.name == "Water" }
         let grassTiles = tileSet.tileGroups.first { $0.name == "Grass"}
         let sandTiles = tileSet.tileGroups.first { $0.name == "Sand"}
+        let cobbleTiles = tileSet.tileGroups.first { $0.name == "Cobblestone"}
 
         let bottomLayer = SKTileMapNode(tileSet: tileSet, columns: columns, rows: rows, tileSize: tileSize)
+        bottomLayer.name = "botLayer"
+
         bottomLayer.fill(with: sandTiles)
         bottomLayer.fill(with: waterTiles)
         bottomLayer.fill(with: grassTiles)
+        bottomLayer.fill(with: cobbleTiles)
 
         map.addChild(bottomLayer)
         
@@ -141,6 +145,7 @@ class ingame: SKScene{
 
         // create our grass/water layer
         let topLayer = SKTileMapNode(tileSet: tileSet, columns: columns, rows: rows, tileSize: tileSize)
+        topLayer.name = "topLayer"
 
         // make SpriteKit do the work of placing specific tiles
         topLayer.enableAutomapping = true
@@ -213,13 +218,25 @@ class ingame: SKScene{
           }}
     
     override func update(_ currentTime: TimeInterval) {
+//        print(map.children)
+        guard let map = map.childNode(withName: "topLayer") as? SKTileMapNode else {
+                fatalError("Background node not loaded")
+            }
+
+
+        let column = map.tileColumnIndex(fromPosition: self.map.position)
+        print("Column " + String(column))
+
+        let row = map.tileRowIndex(fromPosition: self.map.position)
+        print("Row " + String(row))
+        print("X " + String(Int32(player.position.x)))
+        print("Y " + String(Int32(player.position.y)))
+        print("X Map" + String(Int32(self.map.position.x)))
+        print("Y Map" + String(Int32(self.map.position.y)))
+
+            let tile = map.tileDefinition(atColumn: column, row: row)
         
-        let children = map.children
-        print(children)
-        let nodes = map.childNode(withName: "Default Tile Map") as? SKTileMapNode
-        
-        let color = ()
-        
+        print(tile?.name)
 //        let tileSet = childNode(withName: "Sample Grid Tile Set") as? SKTileSet
 //        let tile = tileSet.ti
         
