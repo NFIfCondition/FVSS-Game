@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>FXR65B89Z5.de.IfCondition.FVSS-Game</string>
+	<string>FXR65B89Z5.de.IfCondition.fvssgame</string>
 	<key>com.apple.developer.team-identifier</key>
 	<string>FXR65B89Z5</string>
 	<key>get-task-allow</key>
 	<true/>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>FXR65B89Z5.de.IfCondition.FVSS-Game</string>
+		<string>FXR65B89Z5.de.IfCondition.fvssgame</string>
 	</array>
 </dict>
 </plist>

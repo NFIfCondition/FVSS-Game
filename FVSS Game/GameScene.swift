@@ -153,8 +153,8 @@ class ingame: SKScene{
         // add the grass/water layer to our main map node
         map.addChild(topLayer)
         
-        let row = 5
-        let column = 18
+        let row = 0
+        let column = 0
         let location = vector2(Int32(row), Int32(column))
         let terrainHeight = noiseMap.value(at: location)
         
@@ -202,7 +202,7 @@ class ingame: SKScene{
         
         player = SKSpriteNode(imageNamed: choosenCharakter)
         
-        self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        self.anchorPoint = CGPoint(x: 0, y: 0)
         self.addChild(player)
         
         

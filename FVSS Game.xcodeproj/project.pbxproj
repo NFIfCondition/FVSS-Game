@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1CBE2A25266309E50016016A /* mapsample.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1CBE2A24266309E50016016A /* mapsample.sks */; };
 		CF90AAE52628DF790058A6D4 /* AnalogJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF90AAE42628DF790058A6D4 /* AnalogJoystick.swift */; };
+		CFCB1035266332490099C9DD /* MyTileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = CFCB1034266332490099C9DD /* MyTileSet.sks */; };
 		CFF704EB260D3B84007B7DDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF704EA260D3B84007B7DDA /* AppDelegate.swift */; };
 		CFF704F1260D3B84007B7DDA /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF704F0260D3B84007B7DDA /* GameScene.swift */; };
 		CFF704F3260D3B84007B7DDA /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF704F2260D3B84007B7DDA /* GameViewController.swift */; };
@@ -36,8 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1CBE2A24266309E50016016A /* mapsample.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = mapsample.sks; sourceTree = "<group>"; };
 		CF90AAE42628DF790058A6D4 /* AnalogJoystick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogJoystick.swift; sourceTree = "<group>"; };
+		CFCB1034266332490099C9DD /* MyTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyTileSet.sks; sourceTree = "<group>"; };
 		CFF704E7260D3B84007B7DDA /* FVSS Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FVSS Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF704EA260D3B84007B7DDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFF704F0260D3B84007B7DDA /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 				CFF704F7260D3B85007B7DDA /* Assets.xcassets */,
 				CFF704F9260D3B85007B7DDA /* Info.plist */,
 				CF90AAE42628DF790058A6D4 /* AnalogJoystick.swift */,
-				1CBE2A24266309E50016016A /* mapsample.sks */,
+				CFCB1034266332490099C9DD /* MyTileSet.sks */,
 			);
 			path = "FVSS Game";
 			sourceTree = "<group>";
@@ -234,8 +234,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFCB1035266332490099C9DD /* MyTileSet.sks in Resources */,
 				CFF704F6260D3B84007B7DDA /* Main.storyboard in Resources */,
-				1CBE2A25266309E50016016A /* mapsample.sks in Resources */,
 				CFF704F8260D3B85007B7DDA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,13 +433,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2UK72J6828;
+				DEVELOPMENT_TEAM = FXR65B89Z5;
 				INFOPLIST_FILE = "FVSS Game/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.IfCondition.fvssgame.1234;
+				PRODUCT_BUNDLE_IDENTIFIER = de.IfCondition.fvssgame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -452,13 +452,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2UK72J6828;
+				DEVELOPMENT_TEAM = FXR65B89Z5;
 				INFOPLIST_FILE = "FVSS Game/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.IfCondition.fvssgame.1234;
+				PRODUCT_BUNDLE_IDENTIFIER = de.IfCondition.fvssgame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
