@@ -1,8 +1,8 @@
 version: "Apple Swift version 5.4 (swiftlang-1205.0.26.4 clang-1205.0.19.54)"
 options: "183637e1aa60a78f5c3dce56230dd5a5"
-build_time: [1622343168, 729332000]
+build_time: [1622343369, 99754000]
 inputs:
-  "/Users/benjaminnierlich/Desktop/FVSS Game/FVSS Game/GameScene.swift": [1622342651, 682767763]
+  "/Users/benjaminnierlich/Desktop/FVSS Game/FVSS Game/GameScene.swift": !private [1622343368, 881497624]
   "/Users/benjaminnierlich/Desktop/FVSS Game/FVSS Game/AnalogJoystick.swift": [1618520588, 155169219]
   "/Users/benjaminnierlich/Desktop/FVSS Game/FVSS Game/GameViewController.swift": [1617986835, 560423083]
   "/Users/benjaminnierlich/Desktop/FVSS Game/FVSS Game/AppDelegate.swift": [1622342732, 534907083]
