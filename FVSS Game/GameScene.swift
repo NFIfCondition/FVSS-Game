@@ -6,6 +6,8 @@
 //
 
 import SpriteKit
+import GameplayKit
+
 
 var loaded: Bool = false
 var charakter: String = ""
@@ -106,12 +108,79 @@ class ingame: SKScene{
     var ground = SKSpriteNode()
     let choosenCharakter = charakter
     var player = SKSpriteNode()
-    
-    let velocityMultiplier: CGFloat = 0.12
-      
+    let map = SKNode()
+
+    let velocityMultiplier: CGFloat = 0.042
+
       enum NodesZPosition: CGFloat {
         case joystick
       }
+    
+    func initMap() {
+        addChild(map)
+        map.xScale = 0.2
+        map.yScale = 0.2
+        let tileSet = SKTileSet(named: "Sample Grid Tile Set")!
+        let tileSize = CGSize(width: 128, height: 128)
+        let columns = 256
+        let rows = 256
+
+
+        let waterTiles = tileSet.tileGroups.first { $0.name == "Water" }
+        let grassTiles = tileSet.tileGroups.first { $0.name == "Grass"}
+        let sandTiles = tileSet.tileGroups.first { $0.name == "Sand"}
+
+        let bottomLayer = SKTileMapNode(tileSet: tileSet, columns: columns, rows: rows, tileSize: tileSize)
+        bottomLayer.fill(with: sandTiles)
+        bottomLayer.fill(with: waterTiles)
+        bottomLayer.fill(with: grassTiles)
+
+        map.addChild(bottomLayer)
+        
+        let noiseMap = makeNoiseMap(columns: columns, rows: rows)
+
+        // create our grass/water layer
+        let topLayer = SKTileMapNode(tileSet: tileSet, columns: columns, rows: rows, tileSize: tileSize)
+
+        // make SpriteKit do the work of placing specific tiles
+        topLayer.enableAutomapping = true
+
+        // add the grass/water layer to our main map node
+        map.addChild(topLayer)
+        
+        let row = 5
+        let column = 18
+        let location = vector2(Int32(row), Int32(column))
+        let terrainHeight = noiseMap.value(at: location)
+        
+        topLayer.setTileGroup(waterTiles, forColumn: column, row: row)
+
+        
+        for column in 0 ..< columns {
+            for row in 0 ..< rows {
+                let location = vector2(Int32(row), Int32(column))
+                let terrainHeight = noiseMap.value(at: location)
+
+                if terrainHeight < 0 {
+                    topLayer.setTileGroup(waterTiles, forColumn: column, row: row)
+                } else {
+                    topLayer.setTileGroup(grassTiles, forColumn: column, row: row)
+                }
+            }
+        }
+    }
+    
+    func makeNoiseMap(columns: Int, rows: Int) -> GKNoiseMap {
+        let source = GKPerlinNoiseSource()
+        source.persistence = 0.9
+
+        let noise = GKNoise(source)
+        let size = vector2(1.0, 1.0)
+        let origin = vector2(0.0, 0.0)
+        let sampleCount = vector2(Int32(columns), Int32(rows))
+
+        return GKNoiseMap(noise, size: size, origin: origin, sampleCount: sampleCount, seamless: true)
+    }
     
       lazy var analogJoystick: AnalogJoystick = {
         let screenSize = UIScreen.main.bounds
@@ -124,11 +193,13 @@ class ingame: SKScene{
     
     override func didMove(to view: SKView) {
         setupJoystick()
+        initMap()
         
         player = SKSpriteNode(imageNamed: choosenCharakter)
         
         self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         self.addChild(player)
+        
         
     }
     
@@ -136,12 +207,21 @@ class ingame: SKScene{
           addChild(analogJoystick)
       
           analogJoystick.trackingHandler = { [unowned self] data in
-          self.player.position = CGPoint(x: self.player.position.x + (data.velocity.x * self.velocityMultiplier),
-                                         y: self.player.position.y + (data.velocity.y * self.velocityMultiplier))
+            self.map.position = CGPoint(x: self.map.position.x - (data.velocity.x * self.velocityMultiplier),
+                                         y: self.map.position.y - (data.velocity.y * self.velocityMultiplier))
           self.player.zRotation = data.angular
           }}
     
     override func update(_ currentTime: TimeInterval) {
+        
+        let children = map.children
+        print(children)
+        let nodes = map.childNode(withName: "Default Tile Map") as? SKTileMapNode
+        
+        let color = ()
+        
+//        let tileSet = childNode(withName: "Sample Grid Tile Set") as? SKTileSet
+//        let tile = tileSet.ti
         
     }
     
