@@ -112,6 +112,13 @@ class ingame: SKScene{
         4 : "Test4"
     ]
     
+    var infos = [
+        1 : "Beide sind gleich Drauf",
+        2 : "antwort2",
+        3 : "antwort 3",
+        4 : "antwort 4"
+    ]
+    
     var answers = [
         1 : "Chris und Benny ≤ Benny ≤ Chris",
         2 : "antwort2",
