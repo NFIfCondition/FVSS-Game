@@ -105,8 +105,25 @@ class selectCharakter: SKScene{
 //INGAME SCENE
 class ingame: SKScene{
     
+    var questions = [
+        1 : "Wer ist so richtig lost?",
+        2 : "Test2",
+        3 : "Test3",
+        4 : "Test4"
+    ]
+    
+    var answers = [
+        1 : "Chris und Benny ≤ Benny ≤ Chris",
+        2 : "antwort2",
+        3 : "antwort 3",
+        4 : "antwort 4"
+    ]
+    
+    
+    
+    
     override func didMove(to view: SKView) {
-        
+        print(questions[1]!, answers[1]!)
     }
     
     

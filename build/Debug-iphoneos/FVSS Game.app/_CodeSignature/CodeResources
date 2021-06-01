@@ -24,10 +24,6 @@
 		<data>
 		/+rxJM5vwtJ0vNV9Q2V+aXgZLd8=
 		</data>
-		<key>MyTileSet.sks</key>
-		<data>
-		3aaSZN4qUh/27TBXqclPeX2zd2M=
-		</data>
 		<key>PkgInfo</key>
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
@@ -65,13 +61,6 @@
 			<key>hash2</key>
 			<data>
 			43BmYDyzgT4pNPJboKqjMQtfNUFqmQZ4VnoAPkFLbW4=
-			</data>
-		</dict>
-		<key>MyTileSet.sks</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			o0ML8oPRFu49mz5P8daJgm1cDCcuVOZPxibARQ7N7RE=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>
