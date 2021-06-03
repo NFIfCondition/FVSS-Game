@@ -105,6 +105,11 @@ class selectCharakter: SKScene{
 //INGAME SCENE
 class ingame: SKScene{
     
+    var question = "test"
+    var answer1 = "test1"
+    var answer2 = "test 2"
+    var answer3 = "test 3"
+    
     var questions = [
         1 : "Wer ist so richtig lost?",
         2 : "Test2",
@@ -126,11 +131,70 @@ class ingame: SKScene{
         4 : "antwort 4"
     ]
     
+    func initBackGround(){
+        print(questions[1]!)
+        let quizuiimg = SKSpriteNode(imageNamed: "quizui")
+        quizuiimg.size = self.size
+        quizuiimg.anchorPoint = CGPoint.zero
+        self.addChild(quizuiimg)
+    }
     
+    func createLabelQuestionandAnswers(quest: String, answe1: String, answe2: String, answe3: String){
+        let question = UILabel.init()
+        question.text = quest
+        question.frame = CGRect(x:150, y: 25, width: 625, height: 155)
+        question.font = UIFont(name: "Avenir-Light", size: 25)
+        question.textAlignment = .center
+        self.view?.addSubview(question)
+        
+        let ans1 = UILabel.init()
+        ans1.text = answe1
+        ans1.textAlignment = .center
+        ans1.frame = CGRect(x: 255, y: 200, width: 400, height: 55)
+        ans1.font = UIFont(name: "Avenir-Light", size: 25)
+        ans1.isUserInteractionEnabled = true
+        let guestureRecognizerans1 = UITapGestureRecognizer(target: self, action: #selector(ans1labelclicked(_:)))
+        ans1.addGestureRecognizer(guestureRecognizerans1)
+        self.view?.addSubview(ans1)
+        
+        let ans2 = UILabel.init()
+        ans2.text = answe2
+        ans2.textAlignment = .center
+        ans2.frame = CGRect(x: 255, y: 265, width: 400, height: 55)
+        ans2.font = UIFont(name: "Avenir-Light", size: 25)
+        ans2.isUserInteractionEnabled = true
+        let guestureRecognizerans2 = UITapGestureRecognizer(target: self, action: #selector(ans2labelclicked(_:)))
+        ans2.addGestureRecognizer(guestureRecognizerans2)
+        self.view?.addSubview(ans2)
+        
+        let ans3 = UILabel.init()
+        ans3.text = answe3
+        ans3.textAlignment = .center
+        ans3.frame = CGRect(x: 255, y: 330, width: 400, height: 55)
+        ans3.font = UIFont(name: "Avenir-Light", size: 25)
+        ans3.isUserInteractionEnabled = true
+        let guestureRecognizerans3 = UITapGestureRecognizer(target: self, action: #selector(ans3labelclicked(_:)))
+        ans3.addGestureRecognizer(guestureRecognizerans3)
+        self.view?.addSubview(ans3)
+        
+    }
     
+    @objc func ans1labelclicked(_ sender: Any){
+        print("test clicked ans1")
+    }
+    
+    @objc func ans2labelclicked(_ sender: Any){
+        print("test clicked ans2")
+    }
+    
+    @objc func ans3labelclicked(_ sender: Any){
+        print("test clicked ans3")
+    }
     
     override func didMove(to view: SKView) {
-        print(questions[1]!, answers[1]!)
+        //self.question = questions[1]!
+        initBackGround()
+        createLabelQuestionandAnswers(quest: "test12345", answe1: "Das ist ein Test", answe2: "Das ist ein test2", answe3: "das ist ein test3")
     }
     
     

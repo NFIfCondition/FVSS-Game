@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		OpHDRu/Sz5pS4bTJZT2qfnT9NYE=
+		q1F5TfZLvKgihafe0sdY4k9cn68=
 		</data>
 		<key>Base.lproj/Main.storyboardc/BV1-FR-VrT-view-3se-qz-xqx.nib</key>
 		<data>
-		YId2E1MFBjwANoO0Yocemjyo7nc=
+		Jz2S143DKmCZA7av6Yc0/AYr4GI=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
@@ -18,55 +18,11 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-BV1-FR-VrT.nib</key>
 		<data>
-		j4SyEaE4ew5wrVlyt//KfS4Q74g=
-		</data>
-		<key>Frameworks/XCTAutomationSupport.framework/Info.plist</key>
-		<data>
-		Sh9OjEPaka0PPCddwfdrT2YZf88=
-		</data>
-		<key>Frameworks/XCTAutomationSupport.framework/XCTAutomationSupport</key>
-		<data>
-		I/zKanl6iLHplKgDOKTYZSsGkLI=
-		</data>
-		<key>Frameworks/XCTAutomationSupport.framework/_CodeSignature/CodeResources</key>
-		<data>
-		U2yxdgP2kTZrmRmRxqVZCI+s1ok=
-		</data>
-		<key>Frameworks/XCTAutomationSupport.framework/version.plist</key>
-		<data>
-		qYaGgJVsAppAeRPAL2FgC3qa5u0=
-		</data>
-		<key>Frameworks/XCTest.framework/Info.plist</key>
-		<data>
-		ojvWO2Qxo+FusdyKIKnqYy27KUk=
-		</data>
-		<key>Frameworks/XCTest.framework/XCTest</key>
-		<data>
-		ZODB8gsiEVxVMFbJzeKpFeC1vOY=
-		</data>
-		<key>Frameworks/XCTest.framework/_CodeSignature/CodeResources</key>
-		<data>
-		7ybs2j9miqIWEOBE3kCKM/Ad5oQ=
-		</data>
-		<key>Frameworks/XCTest.framework/version.plist</key>
-		<data>
-		qYaGgJVsAppAeRPAL2FgC3qa5u0=
-		</data>
-		<key>Frameworks/libXCTestBundleInject.dylib</key>
-		<data>
-		XTHVi1NA0wjVOl4K/un80AxNrYY=
-		</data>
-		<key>Frameworks/libXCTestSwiftSupport.dylib</key>
-		<data>
-		YpITJYnucEQXVnHYcuooJyMeUrM=
+		Ev5re6WFR9pUnqvc+HZxiM+KSI8=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		A/tvVxabhX6zuh4yQtq/tl4yZdM=
-		</data>
-		<key>MyTileSet.sks</key>
-		<data>
-		3aaSZN4qUh/27TBXqclPeX2zd2M=
+		1iA1MCaJ8D3M15Ssy74LVaI82ak=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -79,14 +35,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vgBbgjjAKVs0VAeMun86FdDgALYk8tU+KBgVuzTpJtE=
+			hnHnIKqBMNtdimU1+IJDr4YPLohy27VN1saoQ2p88Dg=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/BV1-FR-VrT-view-3se-qz-xqx.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KERVWFRPY50+NZW10iaGQTbLzn8BDQVMjMEumUJgUxo=
+			5ICGnqQUS7hkwy/OAtrna+N6MRcl9Q5DLocXDR3DVv8=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
@@ -100,84 +56,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jKNph3pevh5f35zHIMscxS6Rvyzsqlg9mERzS5rw8+o=
-			</data>
-		</dict>
-		<key>Frameworks/XCTAutomationSupport.framework/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			JNf6SAJjN6FJ8cYOk23yzbXIpSfuWFZj6K/9FzYPcIU=
-			</data>
-		</dict>
-		<key>Frameworks/XCTAutomationSupport.framework/XCTAutomationSupport</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Wa2ZO2PispFNqZZtzils7QLromiTdFFfTWYsvzfRDgg=
-			</data>
-		</dict>
-		<key>Frameworks/XCTAutomationSupport.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			7wErBYCT35r2X5oQGMuzFnycLJixmWT+h33Stbs7Fkg=
-			</data>
-		</dict>
-		<key>Frameworks/XCTAutomationSupport.framework/version.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			6eAlCdzoCd1oCo6LqkQqHWBzDeYTsjc5EapZq+iw+vg=
-			</data>
-		</dict>
-		<key>Frameworks/XCTest.framework/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			zbAvOvNTD3RCN2Fj2pCY7enp1WEnhndzniqzw9Bzo8g=
-			</data>
-		</dict>
-		<key>Frameworks/XCTest.framework/XCTest</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			d8tzMiNa47mkPN1We/bCQxu8A2NtKajSaZXJHEm9Qww=
-			</data>
-		</dict>
-		<key>Frameworks/XCTest.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			R4sw1Sm+CYs0blxSh3af9F9elwENPjA4Z5xn7TcKBCU=
-			</data>
-		</dict>
-		<key>Frameworks/XCTest.framework/version.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			6eAlCdzoCd1oCo6LqkQqHWBzDeYTsjc5EapZq+iw+vg=
-			</data>
-		</dict>
-		<key>Frameworks/libXCTestBundleInject.dylib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			AKHzzliJtmsO7XdhYAlInx7Cdvg5wHKLAcfyR371LW0=
-			</data>
-		</dict>
-		<key>Frameworks/libXCTestSwiftSupport.dylib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			zP9KPwkyhF7RdeMRobgYblgNYgU/5fKXhSQoqViNPXo=
-			</data>
-		</dict>
-		<key>MyTileSet.sks</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			o0ML8oPRFu49mz5P8daJgm1cDCcuVOZPxibARQ7N7RE=
+			HWedlAu9qB5IOHkqSl/ZaKR0Adi+i/xEqPfItCv1Nwc=
 			</data>
 		</dict>
 	</dict>
