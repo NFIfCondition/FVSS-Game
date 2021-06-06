@@ -287,6 +287,11 @@ SWIFT_CLASS("_TtC9FVSS_Game18GameViewController")
 
 SWIFT_CLASS("_TtC9FVSS_Game6ingame")
 @interface ingame : SKScene
+- (void)ans1labelclicked:(id _Nonnull)sender;
+- (void)ans2labelclicked:(id _Nonnull)sender;
+- (void)ans3labelclicked:(id _Nonnull)sender;
+- (void)helptextbtnclicked:(id _Nonnull)sender;
+- (void)scorebtnclicked:(id _Nonnull)sender;
 - (void)didMoveToView:(SKView * _Nonnull)view;
 - (void)update:(NSTimeInterval)currentTime;
 - (nonnull instancetype)initWithSize:(CGSize)size OBJC_DESIGNATED_INITIALIZER;
