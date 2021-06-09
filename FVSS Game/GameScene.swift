@@ -7,6 +7,7 @@
 
 import SpriteKit
 import GameplayKit
+import UIKit
 
 
 var loaded: Bool = false
@@ -112,6 +113,11 @@ class ingame: SKScene, Alertable{
     public var helpTextBtn = UILabel.init()
     public var scoreBtn = UILabel.init()
     
+    public var score = 0
+    public var highscore = 0
+    
+    public var helptextused = false
+    
     var numberquiz: Int = 0
     
     var question = "test"
@@ -142,9 +148,9 @@ class ingame: SKScene, Alertable{
     
     var answers2 = [
         1 : "Chris und Benny =",
-        2 : "antwort2",
-        3 : "antwort 3",
-        4 : "antwort 4"
+        2 : "antwort2 =",
+        3 : "antwort 3 =",
+        4 : "antwort 4 ="
     ]
     
     var answers3 = [
@@ -247,10 +253,11 @@ class ingame: SKScene, Alertable{
     
     @objc func helptextbtnclicked(_ sender: Any){
         showAlert(withTitle: "Help", message: infos[numberquiz]!)
+        helptextused = true
     }
     
     @objc func scorebtnclicked(_ sender: Any){
-        showAlert(withTitle: "Score", message: "Highscore: 0 \nScore: 0")
+        showAlert(withTitle: "Score", message: "Highscore: " + String(highscore) + " \nScore: " + String(score))
     }
     
     func pickQuestNumber() -> Int{
@@ -273,6 +280,15 @@ class ingame: SKScene, Alertable{
             if answer.contains("=") {
                 print(answer + "1111111")
                 self.showAlert(withTitle: "Right", message: "This was the right answer")
+                
+                if helptextused != true {
+                    addPointstoScore(points: 5)
+                    print("test")
+                } else {
+                    addPointstoScore(points: 2)
+                    helptextused = false
+                }
+                
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     self.nextquest()
                 }
@@ -288,6 +304,15 @@ class ingame: SKScene, Alertable{
             if answer.contains("=") {
                 print(answer + "222222")
                 self.showAlert(withTitle: "Right", message: "This was the right answer")
+                
+                if helptextused != true {
+                    addPointstoScore(points: 5)
+                    print("test")
+                } else {
+                    addPointstoScore(points: 2)
+                    helptextused = false
+                }
+                
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     self.nextquest()
                 }
@@ -302,6 +327,15 @@ class ingame: SKScene, Alertable{
             if answer.contains("=") {
                 print(answer + "333333")
                 self.showAlert(withTitle: "Right", message: "This was the right answer")
+                
+                if helptextused != true {
+                    addPointstoScore(points: 5)
+                    print("test")
+                } else {
+                    addPointstoScore(points: 2)
+                    helptextused = false
+                }
+                
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     self.nextquest()
                 }
@@ -320,11 +354,31 @@ class ingame: SKScene, Alertable{
     override func didMove(to view: SKView) {
         self.numberquiz = pickQuestNumber()
         initBackGround()
+        
+        var highscoredefault = UserDefaults.standard
+        
+        if (highscoredefault.value(forKey: "highscore" + charakter) != nil) {
+            highscore = highscoredefault.integer(forKey: "highscore" + charakter)
+        }
+        
         createLabelQuestionandAnswers(quest: questions[Int(self.numberquiz)]!, answe1: answers1[Int(self.numberquiz)]!, answe2: answers2[Int(self.numberquiz)]!, answe3: answers3[Int(self.numberquiz)]!)
     }
     
     
     override func update(_ currentTime: TimeInterval) {
+        
+    }
+    
+    
+    func addPointstoScore(points: Int){
+        score += points
+        if (score > highscore){
+            highscore = score
+            
+            var highscoredefault = UserDefaults.standard
+            highscoredefault.set(highscore, forKey: "highscore" + charakter)
+            highscoredefault.synchronize()
+        }
         
     }
     
