@@ -13,10 +13,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         
         let loadingscene = GameScene(size: self.view.bounds.size)
-        let skview = self.view as! SKView
-        skview.showsFPS = true
-        skview.showsNodeCount = true
-        
+        let skview = self.view as! SKView        
         
         loadingscene.scaleMode = .aspectFill
 

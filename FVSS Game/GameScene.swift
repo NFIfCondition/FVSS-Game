@@ -27,7 +27,7 @@ class GameScene: SKScene {
         
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
-            //loaded = true
+            loaded = true
         }
         
     }
@@ -131,7 +131,7 @@ class ingame: SKScene, Alertable{
         2 : "Between which 2 persons did the quarrel take place?",
         3 : "Who favoured the alternating voltage? ",
         4 : "Who favoured the DC voltage? ",
-        5 : "Who Discussed the Dangerousness about alternating voltage?",
+        5 : "Who Discussed the about alternating voltage?",
         6 : "What was the safety of electricity compared to?",
         7 : "On which animal were experiments frequently carried out? ",
         8 : "Who had the patent rights for the light bulb? ",
@@ -267,16 +267,18 @@ class ingame: SKScene, Alertable{
         self.questionLabel.font = UIFont(name: "Avenir-Light", size: 25)
         self.questionLabel.font = UIFont.boldSystemFont(ofSize: 25)
         self.questionLabel.textAlignment = .center
+        self.questionLabel.numberOfLines = 0
         self.view?.addSubview(self.questionLabel)
         
         //let ans1 = UILabel.init()
         self.ans1Label.text = answer1
         self.ans1Label.textAlignment = .center
         self.ans1Label.frame = CGRect(x: 255, y: 200, width: 400, height: 55)
-        self.ans1Label.font = UIFont(name: "Avenir-Light", size: 25)
-        self.ans1Label.font = UIFont.boldSystemFont(ofSize: 25)
+        self.ans1Label.font = UIFont(name: "Avenir-Light", size: 15)
+        self.ans1Label.font = UIFont.boldSystemFont(ofSize: 15)
         self.ans1Label.textColor = .white
         self.ans1Label.isUserInteractionEnabled = true
+        self.ans1Label.numberOfLines = 0
         let guestureRecognizerans1 = UITapGestureRecognizer(target: self, action: #selector(ans1labelclicked(_:)))
         self.ans1Label.addGestureRecognizer(guestureRecognizerans1)
         self.view?.addSubview(self.ans1Label)
@@ -284,9 +286,10 @@ class ingame: SKScene, Alertable{
         //let ans2 = UILabel.init()
         self.ans2Label.text = answer2
         self.ans2Label.textAlignment = .center
+        self.ans2Label.numberOfLines = 0
         self.ans2Label.frame = CGRect(x: 255, y: 265, width: 400, height: 55)
-        self.ans2Label.font = UIFont(name: "Avenir-Light", size: 25)
-        self.ans2Label.font = UIFont.boldSystemFont(ofSize: 25)
+        self.ans2Label.font = UIFont(name: "Avenir-Light", size: 15)
+        self.ans2Label.font = UIFont.boldSystemFont(ofSize: 15)
         self.ans2Label.textColor = .white
         self.ans2Label.isUserInteractionEnabled = true
         let guestureRecognizerans2 = UITapGestureRecognizer(target: self, action: #selector(ans2labelclicked(_:)))
@@ -296,9 +299,10 @@ class ingame: SKScene, Alertable{
         //let ans3 = UILabel.init()
         self.ans3Label.text = answer3
         self.ans3Label.textAlignment = .center
+        self.ans3Label.numberOfLines = 0
         self.ans3Label.frame = CGRect(x: 255, y: 330, width: 400, height: 55)
-        self.ans3Label.font = UIFont(name: "Avenir-Light", size: 25)
-        self.ans3Label.font = UIFont.boldSystemFont(ofSize: 25)
+        self.ans3Label.font = UIFont(name: "Avenir-Light", size: 15)
+        self.ans3Label.font = UIFont.boldSystemFont(ofSize: 15)
         self.ans3Label.textColor = .white
         self.ans3Label.isUserInteractionEnabled = true
         let guestureRecognizerans3 = UITapGestureRecognizer(target: self, action: #selector(ans3labelclicked(_:)))
@@ -334,7 +338,7 @@ class ingame: SKScene, Alertable{
     }
     
     func pickQuestNumber() -> Int{
-        let randomInt = Int.random(in: 1..<4)
+        let randomInt = Int.random(in: 1..<17)
         let num: Int = randomInt
         return num
     }
